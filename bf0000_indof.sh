@@ -69,10 +69,3 @@ function IndexOf()    {
 }
 
 
-#arr=( "xxxorangexxx" "xxxbananaxxx" )
-#str="orange"
-#
-#a=($(element_contain_str $str ${arr[@]}))
-##echo $a
-#echo ${a[@]}
-

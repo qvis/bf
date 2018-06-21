@@ -34,9 +34,4 @@ function strindex() {
         [[ "$x" = "$1" ]] && echo -1 || echo "${#x}"
     }
 
-#x="abcdefg.hijklmn.x"
-#i=$(strindex "$x" ".")
-#
-#echo $i
-
 
