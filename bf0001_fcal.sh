@@ -3,11 +3,12 @@
 <<comment1
 File Name       :   bf0001_fcal.sh
 Created         :   Feb 2, 2018
-Description     :   Based on user's input,this script figure out "post-processing" ic dates.
+Description     :   Based on user's input,this script figure out processing dates.
 Latest Updated  :   5/5/2018
 Update Notes    :   5/5/2018    bf0002_nextXmonths.sh & bf0003_numdaysinmonth.sh are combined. 
                 :   x/x/xxxx     blah blah blah blah...
 comment1
+
 
 #How to use this function:
 #In order to call this function, write this in your script
