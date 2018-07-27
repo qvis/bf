@@ -142,7 +142,7 @@ arrmmm=("jan" "feb" "mar" "apr" "may" "jun" "jul" "aug" "sep" "oct" "nov" "dec")
 arrNLMdays=(31 28 31 30 31 30 31 31 30 31 30 31)
 arrLMdays=(31 29 31 30 31 30 31 31 30 31 30 31)
 
-function fcal() {
+fcal() {
     local month=$1
     local year=$2
     
@@ -302,14 +302,14 @@ function fcal() {
     echo ${arr[@]}
 }
 
-function fcal_fmmm() {
+fcal_fmmm() {
     local month=$1
     local fmmm=${arrmmm[$(( month - 1 ))]}
 
     echo $fmmm
 }
 
-function fcal_fMmm() {
+fcal_fMmm() {
     local month=$1
     local fmmm=${arrmmm[$(( month - 1 ))]}
     fMmm="$(tr '[:lower:]' '[:upper:]' <<< ${fmmm:0:1})${fmmm:1}"
@@ -317,7 +317,7 @@ function fcal_fMmm() {
     echo $fMmm
 }
 
-function fcal_icm() {
+fcal_icm() {
     local month=$1  #<== forecasting month
     icm=$(( month - 1 ))
 
@@ -327,7 +327,7 @@ function fcal_icm() {
     echo $icm
 }
 
-function fcal_icmmd() {
+fcal_icmmd() {
     local month=$1
     local yr=$2
     local arrtmp=()
@@ -346,7 +346,7 @@ function fcal_icmmd() {
 
 }
 
-function fcal_icmmm() {
+fcal_icmmm() {
     local month=$1  #<== forecasting month
 
     local icm=$(fcal_icm $fmonth)
@@ -356,7 +356,7 @@ function fcal_icmmm() {
     echo $icmmm
 }
 
-function fcal_icmmmd() {
+fcal_icmmmd() {
     local month=$1
     local yr=$2
     local arrmmmd=()
@@ -373,7 +373,7 @@ function fcal_icmmmd() {
     echo ${arrmmmd[@]}
 }
 
-function fcal_icy() {
+fcal_icy() {
     local month=$1  #<== forecasting month
     local yr=$2
     local icy
@@ -386,7 +386,7 @@ function fcal_icy() {
     echo $icy
 }
 
-function fcal_mmm2mm() {
+fcal_mmm2mm() {
     local mmm=$1
 
     for (( i=0; i<${#arrmmm[@]}; i++));do
@@ -401,7 +401,7 @@ function fcal_mmm2mm() {
 }
 
 
-function nextXmonths()    {
+nextXmonths()    {
     local iny=$1
     local inm=$2
     local insft=$3
@@ -457,7 +457,7 @@ function nextXmonths()    {
     echo ${arrmon[@]}
 }
 
-function nextXmonths_mmmyyyy {
+nextXmonths_mmmyyyy {
     local iny=$1
     local inm=$2
     local insft=$3
@@ -492,7 +492,7 @@ function nextXmonths_mmmyyyy {
     echo ${arrout[@]}
 }
 
-function nextXmonths_yyyymm()   {
+nextXmonths_yyyymm()   {
     local iny=$1
     local inm=$2
     local insft=$3
@@ -509,7 +509,7 @@ function nextXmonths_yyyymm()   {
     echo ${arrout[@]}
 }
 
-function nextXmonths_seasonalStrMMM() {
+nextXmonths_seasonalStrMMM() {
     local yr=$1
     local fm=$2
     local nextm=$3
@@ -529,7 +529,7 @@ function nextXmonths_seasonalStrMMM() {
 
 
 
-function numdaysinmonth()    {
+numdaysinmonth()    {
     local mon=$1
     local yr=$2
 
@@ -544,7 +544,7 @@ function numdaysinmonth()    {
     echo $nummon
 }
 
-function numdays_Xmonths() {
+numdays_Xmonths() {
 
     local mon0=$1
     local yr0=$2
